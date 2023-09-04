@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="ILazy.fs" />
+        <Compile Include="Lazy.fs" />
+        <Compile Include="PointFree.fs" />
+        <Compile Include="LazyWithLock.fs" />
+        <Compile Include="LazyLockFree.fs" />
+        <Compile Include="LazyFactory.fs" />
+    </ItemGroup>
+
+</Project>
