@@ -44,11 +44,11 @@ let ``Lazy with lock test`` () =
     x.Value |> should equal 2
 
 [<Test>]
-let ``Lazy free lock test`` () =
+let ``Lazy lock free test`` () =
     let x = ref 0
 
     let _lazy =
-        LazyFactory.CreateLazyFreeLock(fun () -> Interlocked.Increment(x))
+        LazyFactory.CreateLazyLockFree(fun () -> Interlocked.Increment(x))
 
     let tasks =
         Seq.init 10 (fun _ -> async { return _lazy.Get() |> should equal 1 })

@@ -11,5 +11,5 @@ type LazyFactory =
     static member CreateLazyWithLock supplier =
         new LazyWithLock<'t>(supplier) :> ILazy<'t>
 
-    static member CreateLazyFreeLock supplier =
+    static member CreateLazyLockFree supplier =
         new LazyLockFree<'t>(supplier) :> ILazy<'t>
