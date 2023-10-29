@@ -1,0 +1,24 @@
+﻿\documentclass{article}
+\usepackage{amsmath}
+\usepackage[T2A]{fontenc}
+
+\begin{document}
+
+\section*{\LARGE Task 1}
+\LARGE$$(\lambda a.\ (\lambda b. b\ b)\ (\lambda b. b\ b)\ b)\ ((\lambda c. (c\ b))\ (\lambda a. a)) \rightarrow_\beta$$
+$$((\lambda b. b\ b)\ (\lambda b. b\ b))\ ((\lambda c. (c\ b))\ (\lambda a. a)) \rightarrow_\beta$$
+$$(\omega\ \omega)\ ((\lambda c. (c\ b))\ (\lambda a. a)) \equiv$$
+$$\Omega\ ((\lambda c. (c\ b))\ (\lambda a. a))$$
+
+Используя нормальную стратегию, получаем расходящийся комбинатор, не имеющий нормальной формы. 
+Значит, у этого \(\lambda\)-терма нет нормальной формы.
+
+\section*{\LARGE Task 2}
+\LARGE$$S\ K\ K\ \equiv (\lambda x\ y\ z.\ x\ z\ (y\ z))\ (\lambda x\ y.\ x)\ (\lambda x\ y.\ x) \rightarrow_\beta$$
+$$(\lambda y\ z.\ (\lambda x\ y.\ x)\ z\ (y\ z))\ (\lambda x\ y.\ x) \rightarrow_\beta$$
+$$(\lambda z.\ (\lambda x\ y.\ x)\ z\ ((\lambda x\ y.\ x)\ z)) \rightarrow_\beta$$
+$$(\lambda z.\ (\lambda y.\ z)\ ((\lambda x\ y.\ x)\ z)) \rightarrow_\beta$$
+$$(\lambda z.\ (\lambda y.\ z)\ (\lambda y.\ z) \rightarrow_\beta$$
+$$\lambda z.\ z \equiv I\ $$
+
+\end{document}
